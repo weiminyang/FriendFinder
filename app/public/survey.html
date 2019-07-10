@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>survey</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h2 class="text-center"><span class=""></span> Survey Questions</h2>
+            <hr>
+            <h3 class="">About You</h3>
+            <div class="form-group">
+                <label for="reserve-name">Name (Required)</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="reserve-name">Photo link (Required)</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <form role="form">
+
+                    <div class="form-group">
+                        <h3 class="">Question 1</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question1" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 2</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question2" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 3</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question3" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 4</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question4" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 5</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question5" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 6</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question6" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 7</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question7" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 8</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question8" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 9</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question9" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="">Question 10</h3>
+                        <label for="reserve-name">abc</label>
+                        <select id="question10" class="form-control form-control-sm">
+                            <option>1(strongly disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5(strongly agree)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit" >Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div id="showfriend">
+            <p id="friendname"></p>
+            <img id="friendphoto"  width="500px" alt="">
+        </div>
+
+  
+
+
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friendlist">API Friend List</a> | <a href="/api/githubrepo">Github Repo</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    $(".submit").on("click", function (event) {
+        event.preventDefault();
+
+
+
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: []
+        };
+        newFriend.scores.push(parseInt($("#question1").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question2").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question3").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question4").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question5").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question6").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question7").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question8").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question9").val().trim()[0]));
+        newFriend.scores.push(parseInt($("#question10").val().trim()[0]));
+console.log(newFriend);
+
+
+
+        if (newFriend.name != "" && newFriend.photo != "" && newFriend.scores.length === 10) {
+
+
+            $.post("/api/friendlist", newFriend,
+                function (data) {
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("#question1").val("");
+                    $("#question2").val("");
+                    $("#question3").val("");
+                    $("#question4").val("");
+                    $("#question5").val("");
+                    $("#question6").val("");
+                    $("#question7").val("");
+                    $("#question8").val("");
+                    $("#question9").val("");
+                    $("#question10").val("");
+
+                    $("#friendname").text(data.name);
+                    $("#friendphoto").attr("src",data.photo);
+                    
+
+
+                   
+                        var showfriend = $("#showfriend");
+                        var listItem = $("<div class='modal' tabindex='-1' role='dialog'>");
+                            var modalDialog =$("<div class='modal-dialog' role='document'>"); 
+                                listItem.append(modalDialog);
+                            var modalContent =$("<div class='modal-content'>");
+                                modalDialog.append(modalContent);
+
+                        var modalHeader = $("<div class='modal-header'>");
+                        var modalBody = $("<div class='modal-body'>");
+                        var modalFooter = $("<div class='modal-footer'>");
+                            modalContent.append(
+                                modalHeader,
+                                modalBody,
+                                modalFooter
+                            )
+                        var button = $("<button type='button' class='close' data-dismiss='modal' aria-label='Close'>");
+
+
+                        modalHeader.append(
+                            $("<h5 class='modal-title' id='name'>").text(data.name),
+                            button
+                        );
+                        modalBody.append(
+                            $("<img>").attr("src",data.photo)
+                            
+                        );
+                        modalFooter.append(
+                            $("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>")
+                        );
+
+                        showfriend.append(listItem);
+               
+
+//                     <div class="modal" tabindex="-1" role="dialog">
+//   <div class="modal-dialog" role="document">
+//     <div class="modal-content">
+//       <div class="modal-header">
+//         <h5 class="modal-title" id="name">Modal title</h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//           <span aria-hidden="true">&times;</span>
+//         </button>
+//       </div>
+//       <div class="modal-body">
+//         <a href="/api/friendlist"></a>
+//         <p>Modal body text goes here.</p>
+//       </div>
+//       <div class="modal-footer">
+//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+//       </div>
+//     </div>
+//   </div>
+// </div>
+
+
+                });
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+
+    });
+</script>
+
+
+</html>
