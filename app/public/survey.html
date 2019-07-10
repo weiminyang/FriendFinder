@@ -148,7 +148,9 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary submit" >Submit</button>
+                    <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <div class="modal-toggle-div" data-toggle="modal"
+                        data-target="#exampleModal"></div>
                 </form>
 
             </div>
@@ -156,10 +158,10 @@
 
         <div id="showfriend">
             <p id="friendname"></p>
-            <img id="friendphoto"  width="500px" alt="">
+            <img id="friendphoto" width="500px" alt="">
         </div>
 
-  
+
 
 
         <footer class="footer">
@@ -192,7 +194,7 @@
         newFriend.scores.push(parseInt($("#question8").val().trim()[0]));
         newFriend.scores.push(parseInt($("#question9").val().trim()[0]));
         newFriend.scores.push(parseInt($("#question10").val().trim()[0]));
-console.log(newFriend);
+        console.log(newFriend);
 
 
 
@@ -215,66 +217,51 @@ console.log(newFriend);
                     $("#question10").val("");
 
                     $("#friendname").text(data.name);
-                    $("#friendphoto").attr("src",data.photo);
-                    
+                    $("#friendphoto").attr("src", data.photo);
 
 
-                   
-                        var showfriend = $("#showfriend");
-                        var listItem = $("<div class='modal' tabindex='-1' role='dialog'>");
-                            var modalDialog =$("<div class='modal-dialog' role='document'>"); 
-                                listItem.append(modalDialog);
-                            var modalContent =$("<div class='modal-content'>");
-                                modalDialog.append(modalContent);
-
-                        var modalHeader = $("<div class='modal-header'>");
-                        var modalBody = $("<div class='modal-body'>");
-                        var modalFooter = $("<div class='modal-footer'>");
-                            modalContent.append(
-                                modalHeader,
-                                modalBody,
-                                modalFooter
-                            )
-                        var button = $("<button type='button' class='close' data-dismiss='modal' aria-label='Close'>");
 
 
-                        modalHeader.append(
-                            $("<h5 class='modal-title' id='name'>").text(data.name),
-                            button
+                    var showfriend = $("#showfriend");
+                    var listItem = $(
+                        "<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
                         );
-                        modalBody.append(
-                            $("<img>").attr("src",data.photo)
-                            
-                        );
-                        modalFooter.append(
-                            $("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>")
-                        );
+                    var modalDialog = $("<div class='modal-dialog' role='document'>");
+                    listItem.append(modalDialog);
+                    var modalContent = $("<div class='modal-content'>");
+                    modalDialog.append(modalContent);
 
-                        showfriend.append(listItem);
-               
-
-//                     <div class="modal" tabindex="-1" role="dialog">
-//   <div class="modal-dialog" role="document">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <h5 class="modal-title" id="name">Modal title</h5>
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//           <span aria-hidden="true">&times;</span>
-//         </button>
-//       </div>
-//       <div class="modal-body">
-//         <a href="/api/friendlist"></a>
-//         <p>Modal body text goes here.</p>
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
-//       </div>
-//     </div>
-//   </div>
-// </div>
+                    var modalHeader = $("<div class='modal-header'>");
+                    var modalBody = $("<div class='modal-body'>");
+                    var modalFooter = $("<div class='modal-footer'>");
+                    modalContent.append(
+                        modalHeader,
+                        modalBody,
+                        modalFooter
+                    )
+                    var button = $(
+                        "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>");
 
 
+                    modalHeader.append(
+                        $("<h5 class='modal-title' id='name'>").text(data.name),
+                        button
+                    );
+                    modalBody.append(
+                        $("<img width='450px'>").attr("src", data.photo)
+
+                    );
+                    modalFooter.append(
+                        $(
+                            "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>")
+                    );
+
+                    showfriend.append(listItem);
+
+                    $('.modal-toggle-div').click();
+                    modalFooter.find('.btn.btn-secondary').on('click', ()=>{
+                        window.location.reload();
+                    })
                 });
         } else {
             alert("Please fill out all fields before submitting!");
