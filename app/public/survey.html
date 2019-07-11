@@ -157,8 +157,26 @@
         </div>
 
         <div id="showfriend">
-            <p id="friendname"></p>
-            <img id="friendphoto" width="500px" alt="">
+            <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="name"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
 
 
@@ -182,18 +200,21 @@
         var newFriend = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
-            scores: []
+            scores: [
+            $("#question1").val().trim()[0],
+            $("#question2").val().trim()[0],
+            $("#question3").val().trim()[0],
+            $("#question4").val().trim()[0],
+            $("#question5").val().trim()[0],
+            $("#question6").val().trim()[0],
+            $("#question7").val().trim()[0],
+            $("#question8").val().trim()[0],
+            $("#question9").val().trim()[0],
+            $("#question10").val().trim()[0],
+
+            ]
         };
-        newFriend.scores.push(parseInt($("#question1").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question2").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question3").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question4").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question5").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question6").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question7").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question8").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question9").val().trim()[0]));
-        newFriend.scores.push(parseInt($("#question10").val().trim()[0]));
+      
         console.log(newFriend);
 
 
@@ -222,44 +243,45 @@
 
 
 
-                    var showfriend = $("#showfriend");
-                    var listItem = $(
-                        "<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
-                        );
-                    var modalDialog = $("<div class='modal-dialog' role='document'>");
-                    listItem.append(modalDialog);
-                    var modalContent = $("<div class='modal-content'>");
-                    modalDialog.append(modalContent);
+                    // var showfriend = $("#showfriend");
+                    // var listItem = $(
+                    //     "<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
+                    //     );
+                    // var modalDialog = $("<div class='modal-dialog' role='document'>");
+                    // listItem.append(modalDialog);
+                    // var modalContent = $("<div class='modal-content'>");
+                    // modalDialog.append(modalContent);
 
-                    var modalHeader = $("<div class='modal-header'>");
-                    var modalBody = $("<div class='modal-body'>");
-                    var modalFooter = $("<div class='modal-footer'>");
-                    modalContent.append(
-                        modalHeader,
-                        modalBody,
-                        modalFooter
-                    )
-                    var button = $(
-                        "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>");
+                    // var modalHeader = $("<div class='modal-header'>");
+                    // var modalBody = $("<div class='modal-body'>");
+                    // var modalFooter = $("<div class='modal-footer'>");
+                    // modalContent.append(
+                    //     modalHeader,
+                    //     modalBody,
+                    //     modalFooter
+                    // )
+                    // var button = $(
+                    //     "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>");
 
-
-                    modalHeader.append(
-                        $("<h5 class='modal-title' id='name'>").text(data.name),
-                        button
-                    );
+                        var modalHeader=$(".modal-header");
+                        var modalBody=$(".modal-body");
+                   $(".modal-title").text(data.name);
                     modalBody.append(
                         $("<img width='450px'>").attr("src", data.photo)
 
                     );
-                    modalFooter.append(
-                        $(
-                            "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>")
-                    );
+                    // modalFooter.append(
+                    //     $(
+                    //         "<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>")
+                    // );
 
-                    showfriend.append(listItem);
+                    // showfriend.append(listItem);
 
                     $('.modal-toggle-div').click();
-                    modalFooter.find('.btn.btn-secondary').on('click', ()=>{
+                    $(".modal-footer").find('.btn.btn-secondary').on('click', ()=>{
+                        window.location.reload();
+                    })
+                    $(".modal-header").find('.close').on('click', ()=>{
                         window.location.reload();
                     })
                 });
