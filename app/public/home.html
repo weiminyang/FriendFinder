@@ -7,7 +7,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="892059943609-jnh7iv9rlu3ocish1qfiamkuk6hnu3df.apps.googleusercontent.com">
 </head>
 <body>
 
@@ -16,6 +17,16 @@
     <div class="jumbotron">
       <h1 class="text-center"><span class=""></span> Friend Finder</h1>
       <hr>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
       <h2 class="">Answer a few basic questions.</h2>
       <h2 class="">Then find the friend with the greatest compatibility!</h2>
       <br>
